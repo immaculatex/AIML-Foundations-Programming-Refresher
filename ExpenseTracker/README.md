@@ -50,17 +50,17 @@ Features:
 How to Run:
 -----------
 1. Clone the repository:
-   git clone https://github.com/<your-github-username>/expense-tracker.git
+   git clone https://github.com/immaculatex/AIML-Foundations-Programming-Refresher.git
 
 2. Navigate to the project directory:
-   cd expense-tracker
+   cd ExpenseTracker
 
 3. Run the Python program:
-   python expense_tracker.py
+   python CEP1_ExpenseTracker.ipynb
 
 File Structure:
 ---------------
-expense-tracker/
+ExpenseTracker/
 │
 ├── CEP1_ExpenseTracker.ipynb     - Main program
 ├── expenses.csv           - File to store saved expense data
