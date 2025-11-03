@@ -1,45 +1,91 @@
-# ✅ Task Manager with User Authentication
+# 🧩 Task Manager & Expense Tracker
 
 ## 📘 Problem Statement
-In today’s world, individuals often need to keep track of various tasks in a structured way.  
-This **Task Manager** allows users to create, view, update, and delete their tasks securely.  
-Each user must log in with their own credentials, ensuring privacy and separation of data.  
-Only the authenticated user can access their own tasks.
+
+In today’s world, individuals often need to keep track of **tasks** and **expenses** in a structured and organized way.  
+This project provides two simple yet powerful systems:
+
+1. **Task Manager** – To manage daily tasks with authentication.  
+2. **Expense Tracker** – To record expenses, manage budgets, and track spending.  
+
+Both applications emphasize **file handling**, **data persistence**, and **menu-driven user interfaces** in Python.
 
 ---
 
 ## 🎯 Objectives
-1. Design and implement a user authentication system (login and registration).  
-2. Create a task management system that allows users to:  
-   - Add tasks  
-   - View tasks  
-   - Mark tasks as completed  
-   - Delete tasks  
-3. Use file handling to store user credentials and tasks persistently.  
-4. Create an interactive, menu-driven interface for easy task management.
+
+### Task Manager
+1. Implement **User Authentication** (Login & Registration)
+2. Allow users to:
+   - Add, View, Mark as Completed, and Delete Tasks
+3. Use **file handling** for storing credentials and tasks
+4. Provide a **menu-driven interface** for task management
+
+### Expense Tracker
+1. Enable users to record and manage expenses
+2. Track and compare spending against a **monthly budget**
+3. Use **CSV files** for data storage and persistence
+4. Offer an **interactive menu** for smooth navigation
 
 ---
 
-## 🧩 Features
+## 🧑‍💻 Features & Functionalities
 
-### 1. 🔐 User Authentication
+### 🔐 User Authentication
+
 #### Registration:
-- Prompts the user to enter a **username** and **password**.
-- Ensures that the username is **unique**.
-- **Hashes the password** for security before saving it to a file.
+- Prompts the user for a **username** and **password**.
+- Ensures username uniqueness.
+- **Hashes the password** before storing it securely in `users.csv`.
 
 #### Login:
-- Prompts the user for their username and password.
-- Validates credentials against stored data.
-- Grants access to the Task Manager upon successful login.
+- Validates user credentials.
+- On successful login, grants access to the **Task Manager** interface.
+- Ensures that each user’s tasks remain **private and isolated**.
 
 ---
 
-### 2. 📝 Add a Task
-- Prompts the user for a **task description**.
-- Assigns a **unique task ID** and sets the **status** to “Pending”.
-- Stores the task in the user’s file.
+### 🧾 Task Manager Functionalities
 
-Example:
-```python
-{'id': 1, 'description': 'Finish project report', 'status': 'Pending'}
+#### 1. ➕ Add a Task
+- Prompts the user to enter a **task description**.
+- Assigns a **unique Task ID** and sets the status to `Pending`.
+- Stores task details in a user-specific file, e.g., `tasks_<username>.csv`.
+
+#### 2. 👀 View Tasks
+- Displays all stored tasks for the logged-in user.
+- Shows each task’s:
+  - Task ID
+  - Description
+  - Status (`Pending` or `Completed`)
+
+#### 3. ✅ Mark a Task as Completed
+- Allows the user to select a task by **Task ID**.
+- Updates its status to `Completed`.
+
+#### 4. ❌ Delete a Task
+- Enables the user to delete a specific task by **Task ID**.
+- Confirms before removing it permanently from the task list.
+
+#### 5. 🧭 Interactive Menu
+A clean, text-based interface offering:
+1. Add a Task  
+2. View Tasks  
+3. Mark a Task as Completed  
+4. Delete a Task  
+5. Logout  
+
+The menu repeats until the user logs out.
+
+---
+
+## 💾 File Handling (Task Manager)
+
+| File Name | Purpose |
+|------------|----------|
+| `users.csv` | Stores registered usernames and hashed passwords |
+| `tasks_<username>.csv` | Stores user-specific tasks with Task ID, description, and status |
+
+When a user logs in, the system automatically loads their existing tasks.
+
+---
