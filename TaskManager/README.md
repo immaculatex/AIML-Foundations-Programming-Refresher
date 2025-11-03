@@ -83,8 +83,8 @@ The menu repeats until the user logs out.
 
 | File Name | Purpose |
 |------------|----------|
-| `users.csv` | Stores registered usernames and hashed passwords |
-| `tasks_<username>.csv` | Stores user-specific tasks with Task ID, description, and status |
+| `users.json` | Stores registered usernames and hashed passwords |
+| `<username>_tasks.json` | Stores user-specific tasks with Task ID, description, and status |
 
 When a user logs in, the system automatically loads their existing tasks.
 
