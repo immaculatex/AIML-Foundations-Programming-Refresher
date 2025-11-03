@@ -15,5 +15,5 @@ This repository contains two Python programs:
 
 ## How to Run
 ```bash
-python expense_tracker.py
+python CEP1_ExpenseTracker.ipynb
 python task_manager.py
